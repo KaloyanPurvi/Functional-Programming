@@ -2,7 +2,7 @@
 --която пресмята на средно аритметичното от квадратите на 2 числа.
 main :: IO()
 main=do
-    print (myAvg 2 1)
-myAvg::Double->Double->Double
-myAvg a b=
-    ((a*a)+(b*b))/2
+    print (calcAverage  2.5 1)
+calcAverage ::Double->Double->Double
+calcAverage  a b=
+    ((a**2)+(b**2))/2
