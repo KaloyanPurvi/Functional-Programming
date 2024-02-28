@@ -2,7 +2,7 @@
 
 main::IO()
 main=do
-    print (reverseNumberRecNotIter 102)
+    print (reverseNumber 102)
 
 
 reverseNumber::Int->Int
