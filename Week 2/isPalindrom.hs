@@ -1,3 +1,6 @@
+--THIS IS NOT A TASK,
+--I did it simply for fun
+
 main::IO()
 main=do
     print $ isPermutation 1124 2421 --should me false
