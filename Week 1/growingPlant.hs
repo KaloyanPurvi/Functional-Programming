@@ -13,12 +13,12 @@ main=do
 
 
 growingPlant::Int->Int->Int->Int
-growingPlant day night reach=
-    growingPlantHelp 0 day reach (day-night)
-    
-growingPlantHelp::Int->Int->Int->Int->Int
-growingPlantHelp countDay myReach seekedReach myUpdate=
-    if(myReach>=seekedReach) then countDay+1;
-    else growingPlantHelp (countDay+1) (myReach+myUpdate) seekedReach myUpdate
+growingPlant day night seekedReach=
+    growingPlantHelp 0 day (day-night)
+     where
+        growingPlantHelp::Int->Int->Int->Int
+        growingPlantHelp countDay myReach myUpdate=
+            if(myReach>=seekedReach) then countDay+1;
+             else growingPlantHelp (countDay+1) (myReach+myUpdate) myUpdate
 
 

@@ -5,16 +5,18 @@
 -}
 main::IO()
 main=do
+  print (fibRecNotIter 4)
   print (fibRecIter 4)
 
 fibRecIter::Int->Int
-fibRecIter x=
-    fibHelper 0 1 x
+fibRecIter counter=
+    fibHelper 0 1 counter
+     where
+       fibHelper :: Int -> Int -> Int -> Int
+       fibHelper a b counter
+        | counter == 0  = b
+        | otherwise = fibHelper b (a + b) (counter - 1)
 
-fibHelper::Int->Int->Int->Int
-fibHelper a b 0= (b)
-fibHelper a b x=
-    fibHelper b (a+b) (x-1)
 
 
 
